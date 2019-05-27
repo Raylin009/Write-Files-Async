@@ -3,9 +3,8 @@ const util = require('util');
 var path = require('path');
 
 function logCompletion(name){
-    return new Promise(resolve => {
-        console.log(`Finished Writing file ${name}`)
-    })
+            console.log(`Finished Writing file ${name}`)
+
 }
 
 function writeFileAsync(directory, file){
@@ -76,13 +75,13 @@ function taskThree(x, location){
             let directionIsGood = isItGoodOrBad();
             if(directionIsGood){
                 writeFileAsync(location, name)
-                .then((success) => logCompletion(name))
+                .then(logCompletion(name))
                 .then(i++)
             } else{
                 writeFileAsync(badPath, name)
-                .then((success)=> logCompletion(name))
-                .then(i++)
+                .then(logCompletion(name))
                 .catch((err)=> {console.log(`Failed to write ${name}`)})
+                .then(i++)
             }
         }
         console.log(`** Finished with taskThree **`)
