@@ -34,35 +34,35 @@ function delayFiveSec(){
 
 function taskOne(x, location){
     return new Promise(resolve => {
-        console.log('Starting task taskOne')
+        console.log('Starting task T1')
         let i = 1;
         while(i <= x){
-            let name = `taskOne_${i}`;
+            let name = `T1_${i}`;
             writeFileAsync(location,name)
             .then(logCompletion(name))
             .then(i++)
         }
-        console.log('** Finished with taskOne **')
+        console.log('** Finished with T1 **')
     })
 }
 
 function taskTwo(x, location){
     return new Promise(resolve => {
-        console.log('Starting task taskTwo')
+        console.log('Starting task T2')
         let i = 1;
         while(i <= x){
-            let name = `taskTwo_${i}`;
+            let name = `T2_${i}`;
                 writeFileAsync(location, name)
                 .then((success) => logCompletion(name))
                 .then(i++)
         }
-        console.log(`** Finished with taskTwo **`)
+        console.log(`** Finished with T2 **`)
     })
 }
 
 function taskThree(x, location){
     return new Promise( resolve => {
-        console.log('Starting task taskThree')
+        console.log('Starting task T3')
         const badPath = path.join(__dirname,`/notHome`);
         const randomlyDelayedIndex = Math.floor(Math.random()*Math.floor(x+1)+1);
         const isItGoodOrBad = () => { 
@@ -71,7 +71,7 @@ function taskThree(x, location){
         }
         let i = 1;
         while(i <= x){
-            let name = `taskThree_${i}`;
+            let name = `T2_${i}`;
             let directionIsGood = isItGoodOrBad();
             if(directionIsGood){
                 writeFileAsync(location, name)
@@ -84,7 +84,7 @@ function taskThree(x, location){
                 .then(i++)
             }
         }
-        console.log(`** Finished with taskThree **`)
+        console.log(`** Finished with T3 **`)
     })
 }
 
