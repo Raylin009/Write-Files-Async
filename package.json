@@ -1,0 +1,27 @@
+{
+  "name": "write-files-async",
+  "version": "1.0.0",
+  "description": "Create a simple node.js app that runs the numbered tasks below. The app should run through all of its tasks one at a time in sequence when you run `node asyncTasks.js` in its parent directory. Before starting each task log `Starting task [taskNumber]` to the console, log `Finished task [taskNumber]` after the task is complete.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raylin009/Write-Files-Async.git"
+  },
+  "keywords": [
+    "Async"
+  ],
+  "author": "Chris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raylin009/Write-Files-Async/issues"
+  },
+  "homepage": "https://github.com/Raylin009/Write-Files-Async#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
